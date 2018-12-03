@@ -13,6 +13,7 @@ namespace _300910377_KAUR__300916412_YANG__Project.Services
         Task RemoveAsync(Guid id);
         Task<IEnumerable<PatientEHR>> GetAllAsync();
         Task<PatientEHR> FindAsync(Guid id);
+        Task<IEnumerable<PatientEHR>> FindByPatientAsync(string patientId);
         Task UpdateAsync(PatientEHR chapter);
     }
 }

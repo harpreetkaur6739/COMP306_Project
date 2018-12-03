@@ -9,8 +9,6 @@ namespace _300910377_KAUR__300916412_YANG__Project.Services
 {
     public class PatientEHRRecordService : IPatientEHRRecordService
     {
-        //private readonly ConcurrentDictionary<Guid, PatientEHR> _patientRecords = new ConcurrentDictionary<Guid, PatientEHR>();
-
         private readonly PatientEHRContext _context;
 
         public PatientEHRRecordService(PatientEHRContext context)
@@ -23,8 +21,7 @@ namespace _300910377_KAUR__300916412_YANG__Project.Services
             patientRecord.Id = Guid.NewGuid();
             _context.PatientEHR.Add(patientRecord);
             _context.SaveChanges();
-            /*patientRecord.Id = Guid.NewGuid();
-            _patientRecords[patientRecord.Id] = patientRecord;*/
+
             return Task.CompletedTask;
         }
 
@@ -48,7 +45,7 @@ namespace _300910377_KAUR__300916412_YANG__Project.Services
             }
             _context.PatientEHR.Remove(patient);
             _context.SaveChanges();
-            //_patientRecords.TryRemove(id, out PatientEHR removed);
+
             return Task.CompletedTask;
         }
 
@@ -57,16 +54,28 @@ namespace _300910377_KAUR__300916412_YANG__Project.Services
         public Task<PatientEHR> FindAsync(Guid id)
         {
            var patient = _context.PatientEHR.Find(id);
-            //_patientRecords.TryGetValue(id, out PatientEHR patientRecord);
+
             return Task.FromResult(patient);
+        }
+
+        public Task<IEnumerable<PatientEHR>> FindByPatientAsync(string patientId) {
+
+            var patientRecords = _context.PatientEHR.Where(patient => patient.PatientId == patientId).ToList();
+
+            return Task.FromResult<IEnumerable<PatientEHR>>(patientRecords);
         }
 
         public Task UpdateAsync(PatientEHR patientRecord)
         {
-            
-            _context.PatientEHR.Update(patientRecord);
-            _context.SaveChanges();
-           // _patientRecords[patientRecord.Id] = patientRecord;
+            try
+            {
+                _context.PatientEHR.Update(patientRecord);
+                _context.SaveChanges();
+            }
+            catch (Exception e) {
+                
+            }
+
             return Task.CompletedTask;
         }
     }

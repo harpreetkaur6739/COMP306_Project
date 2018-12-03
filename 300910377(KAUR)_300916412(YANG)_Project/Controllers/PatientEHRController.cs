@@ -44,6 +44,24 @@ namespace _300910377_KAUR__300916412_YANG__Project.Controllers
             }
         }
 
+        [HttpGet("patient/{id}", Name = nameof(GetPatientEHRByPatientIdAsync))]
+        [ProducesResponseType(typeof(IEnumerable<PatientEHR>), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> GetPatientEHRByPatientIdAsync(string id)
+        {
+            IEnumerable<PatientEHR> patientRecords = await _patientEHRRecordService.FindByPatientAsync(id);
+            if (patientRecords == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return new ObjectResult(patientRecords);
+            }
+        }
+
+
+
         [HttpPost]
         [ProducesResponseType(typeof(PatientEHR), 201)]
         [ProducesResponseType(400)]
@@ -58,7 +76,6 @@ namespace _300910377_KAUR__300916412_YANG__Project.Controllers
               new { id = patient.Id }, patient);
         }
 
-        // PUT api/bookchapters/guid
         [HttpPut("{id}")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
@@ -69,15 +86,26 @@ namespace _300910377_KAUR__300916412_YANG__Project.Controllers
             {
                 return BadRequest();
             }
-            if (await _patientEHRRecordService.FindAsync(id) == null)
+
+            PatientEHR pt = await _patientEHRRecordService.FindAsync(id);
+            if (pt == null)
             {
                 return NotFound();
             }
-            await _patientEHRRecordService.UpdateAsync(patient);
+
+            pt.ReasonForVisit = patient.ReasonForVisit;
+            pt.VisitDateTime = patient.VisitDateTime;
+            pt.DiagnosisCode = patient.DiagnosisCode;
+            pt.DiagnosisDescription = patient.DiagnosisDescription;
+            pt.LabName = patient.LabName;
+            pt.LabValue = patient.LabValue;
+            pt.LabUnits = patient.LabUnits;
+            pt.LabDateTime = patient.LabDateTime;
+            
+            await _patientEHRRecordService.UpdateAsync(pt);
             return new NoContentResult();
         }
 
-        // DELETE api/bookchapters/guid
         [HttpDelete("{id}")]
         public async Task DeleteAsync(Guid id) => await _patientEHRRecordService.RemoveAsync(id);
     }
