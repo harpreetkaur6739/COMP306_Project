@@ -12,3 +12,17 @@ E:\Professional\Projects\COMP306_CloudComputingAPI\300910377(KAUR)_300916412(YAN
 E:\Professional\Projects\COMP306_CloudComputingAPI\300910377(KAUR)_300916412(YANG)_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.RazorTargetAssemblyInfo.cache
 E:\Professional\Projects\COMP306_CloudComputingAPI\300910377(KAUR)_300916412(YANG)_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.dll
 E:\Professional\Projects\COMP306_CloudComputingAPI\300910377(KAUR)_300916412(YANG)_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.pdb
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\bin\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.deps.json
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\bin\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.runtimeconfig.json
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\bin\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.runtimeconfig.dev.json
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\bin\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.dll
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\bin\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.pdb
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.csprojAssemblyReference.cache
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.csproj.CoreCompileInputs.cache
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.RazorAssemblyInfo.cache
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.RazorAssemblyInfo.cs
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.AssemblyInfoInputs.cache
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.AssemblyInfo.cs
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.RazorTargetAssemblyInfo.cache
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.dll
+G:\Github\COMP306_Project\300910377(KAUR)_300916412(YANG)_Project\obj\Debug\netcoreapp2.1\300910377(KAUR)_300916412(YANG)_Project.pdb

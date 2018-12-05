@@ -18,7 +18,7 @@ namespace _300910377_KAUR__300916412_YANG__Project.Services
 
         public Task AddAsync(PatientEHR patientRecord)
         {
-            patientRecord.Id = Guid.NewGuid();
+            //patientRecord.Id = Guid.NewGuid();
             _context.PatientEHR.Add(patientRecord);
             _context.SaveChanges();
 
