@@ -8,7 +8,7 @@ namespace _300910377_KAUR__300916412_YANG__Project.Services
 {
     public interface IPatientEHRRecordService
     {
-        Task AddAsync(PatientEHR patientRecord);
+        Task<Guid> AddAsync(PatientEHR patientRecord);
         Task AddRangeAsync(IEnumerable<PatientEHR> patientRecords);
         Task RemoveAsync(Guid id);
         Task<IEnumerable<PatientEHR>> GetAllAsync();

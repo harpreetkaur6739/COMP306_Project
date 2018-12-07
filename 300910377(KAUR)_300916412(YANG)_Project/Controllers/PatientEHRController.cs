@@ -71,9 +71,16 @@ namespace _300910377_KAUR__300916412_YANG__Project.Controllers
             {
                 return BadRequest();
             }
-            await _patientEHRRecordService.AddAsync(patient);
+            try
+            {
+                Guid id = await _patientEHRRecordService.AddAsync(patient);
+                
+            }
+            catch (Exception ex) {
+                Console.Write(ex.StackTrace);
+            }
             return CreatedAtRoute(nameof(GetPatientEHRByIdAsync),
-              new { id = patient.Id }, patient);
+                   new { id = patient.Id }, patient);
         }
 
         [HttpPut("{id}")]

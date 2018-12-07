@@ -16,13 +16,13 @@ namespace _300910377_KAUR__300916412_YANG__Project.Services
             _context = context;
         }
 
-        public Task AddAsync(PatientEHR patientRecord)
+        public Task<Guid> AddAsync(PatientEHR patientRecord)
         {
-            //patientRecord.Id = Guid.NewGuid();
+            patientRecord.Id = Guid.NewGuid();
             _context.PatientEHR.Add(patientRecord);
             _context.SaveChanges();
 
-            return Task.CompletedTask;
+            return Task.FromResult(patientRecord.Id);
         }
 
         public Task AddRangeAsync(IEnumerable<PatientEHR> patientRecords)
